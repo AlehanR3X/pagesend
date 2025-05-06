@@ -1,0 +1,80 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #F8F9FA;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header {
+    background: #0078D7;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.button {
+    background-color: #0078D7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #005A9E;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #D1D1D1;
+    border-radius: 6px;
+}
+
+.input-field:focus {
+    border-color: #0078D7;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #EAEAEA;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress-bar div {
+    height: 20px;
+    background-color: #4CAF50;
+    width: 0;
+    transition: width 0.3s;
+}
+
+.alert {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}

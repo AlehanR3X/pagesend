@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Mode</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Live Mode</h1>
+        <p>Interact with live data from Telegram.</p>
+
+        <div class="form-group">
+            <label for="group-select">Select Group:</label>
+            <select id="group-select" name="group">
+                <option value="group1">Group 1</option>
+                <option value="group2">Group 2</option>
+                <option value="group3">Group 3</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="limit-input">Number of Messages:</label>
+            <input type="number" id="limit-input" name="limit" value="100" min="1">
+        </div>
+
+        <div class="form-group">
+            <label for="bank-filter">Select Bank:</label>
+            <select id="bank-filter" name="bank">
+                <option value="all">All Banks</option>
+                <option value="wells_fargo">Wells Fargo</option>
+                <option value="bank_of_america">Bank of America</option>
+                <option value="chase_bank">Chase Bank</option>
+                <option value="citibank">Citibank</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="bin-filter">Filter by BIN:</label>
+            <input type="text" id="bin-filter" name="bin" placeholder="Enter BIN (min 6 digits)">
+        </div>
+
+        <button id="start-button">Start Extraction</button>
+        <button id="cancel-button">Cancel</button>
+
+        <div id="status-message"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

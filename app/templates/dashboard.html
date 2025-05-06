@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard Principal</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('send') }}">Abrir Envío de Mensajes</a></li>
+                <li><a href="{{ url_for('live') }}">Abrir Modo Live</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2>Bienvenido al Dashboard</h2>
+            <p>Utiliza el menú para navegar entre las diferentes funcionalidades de la aplicación.</p>
+        </section>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

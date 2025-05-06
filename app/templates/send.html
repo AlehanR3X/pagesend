@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Messages</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Send Messages</h1>
+        <form id="sendMessageForm">
+            <label for="destination">Select Destination:</label>
+            <select id="destination" name="destination" required>
+                {% for destination in destinations %}
+                    <option value="{{ destination }}">{{ destination }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="prefix">Enter Prefix (e.g., '.chk '):</label>
+            <input type="text" id="prefix" name="prefix" required>
+
+            <label for="delay">Enter Delay Between Sends (in seconds):</label>
+            <input type="number" id="delay" name="delay" min="1" max="3600 value="30">
+
+            <label for="messages">Enter Messages (one per line):</label>
+            <textarea id="messages" name="messages" rows="10" required></textarea>
+
+            <button type="submit">Send Messages</button>
+            <button type="button" id="cancelButton">Cancel Sending</button>
+        </form>
+
+        <div id="progressContainer">
+            <progress id="progressBar" value="0" max="100"></progress>
+            <span id="timerLabel">Time Remaining: 00:00</span>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
